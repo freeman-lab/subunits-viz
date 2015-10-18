@@ -1,0 +1,71 @@
+<head>
+	<title>subunits</title>
+</head>
+
+<body>
+	<div class="container-narrow">
+		<div class="row-fluid">
+			<div id="sitename" class = "span2">subunits </div>
+			<div id="siteversion" class = "span2"> version 1.0 </div>
+			<div id="sitehelp" class = "span8 pull-right"> click and drag to <i class="icon-move"></i>&nbsp &nbsp scroll to <i class="icon-zoom-in"></i>&nbsp &nbsp hover cells to <i class="icon-bar-chart"></i> </div>
+		</div>
+		<hr id="topline">
+		<div class="row-fluid">
+			<div class="span3">			
+				{{> data_set_menu}}
+				<br>
+				{{> cell_type_menu}}
+				<br>
+				{{> fit_type_menu}}
+			</div>
+			<div class="span9">
+				{{> cell_count}}
+				{{> loaddata}}
+				<div class="row-fluid">
+					<div class="span1"><div id="pop-up"><div id="pop-img"></div><div id="pop-desc"></div></div></div>
+					<div class="span2"><div id="staContainer"></div></div>
+					<div class="span3"><div id="nonLinContainer"></div></div>
+					<div class="span3"><div id="r2Container"></div></div>
+					<div class="span3"><div id="r2SelContainer"></div></div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</body>
+
+<template name="data_set_menu">
+	<div id="menuname">datasets:</div>
+	<ul class="nav nav-list data_set_menu">
+		{{#each data_sets}}
+		<li class="{{selected}} data_set_menu_item"> <a>{{data_set}}</a></li>
+		{{/each}}
+	</ul>
+</template>
+
+<template name="cell_type_menu">
+	<div id="menuname">cell types:</div>
+	<ul class="nav nav-list cell_type_menu">
+		{{#each cell_types}}
+		<li class="{{selected}} cell_type_menu_item"> <a>{{cell_type}}</a></li>
+		{{/each}}
+	</ul>
+</template>
+
+<template name="fit_type_menu">
+	<div id="menuname">fit types:</div>
+	<ul class="nav nav-list fit_type_menu">
+		{{#each fit_types}}
+		<li class="{{selected}} fit_type_menu_item"> <a>{{fit_type}}</a></li>
+		{{/each}}
+	</ul>
+</template>
+
+<template name="loaddata">
+	Showing {{fit_type}} fit for {{cell_type}}s from {{data_set}}
+	<div id="mainGraphContainer"></div>
+</template>
+
+<template name="cell_count">
+	<div class="badge pull-right">{{num_cells}} cells</div>
+</template>

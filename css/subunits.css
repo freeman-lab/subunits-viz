@@ -1,0 +1,138 @@
+*{
+	-webkit-tap-highlight-color : rgba(0,0,0,0);
+	-webkit-user-select         : none;                /* disable text select */
+	-webkit-touch-callout       : none;              /* disable callout, image save panel (popup) */
+	-webkit-tap-highlight-color : transparent; /* "turn off" link highlight */
+}
+
+body {
+	font-family      : 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight   : 300;
+	padding-left  : 20px;
+	padding-right : 20px;
+}
+
+.container-narrow {
+	margin    : 0 auto;
+	max-width : 1000px;
+}
+
+circle.node {
+	stroke       : #fff;
+	stroke-width : 1.5px;
+}
+
+line.link {
+	stroke         : #999;
+	stroke-opacity : 1;
+}
+
+path.diagline {
+	fill         : none;
+	stroke       : black;
+	stroke-width : 0.5px;
+}
+
+path.nonlin {
+	fill         : none;
+	stroke       : black;
+	opacity      : 0.3;
+	stroke-width : 0.5px;
+}
+
+path.nonlin.active {
+	stroke       : red;
+	stroke-width : 7px;
+	opacity      : 1.0;
+}
+
+circle.dot, circle.dot_sel {
+	opacity : 0.3;
+}
+
+circle.dot.active, circle.dot_sel.active {
+	fill         : red;
+	stroke       : red;
+	stroke-width : 10px;
+	opacity      : 1;
+}
+
+.axis {
+	shape-rendering : crispEdges;
+}
+
+.axis path, .axis line {
+	fill         : none;
+	stroke       : black;
+	stroke-width : 1px;
+	opacity      : 1;
+}
+
+.axis text {
+	font-family : sans-serif;
+	font-size   : 11px;
+}
+
+.highlight {
+
+}
+
+#topline {
+	margin: 7px;
+}
+
+#mainGraphContainer {
+	width  : 600;
+	height : 600;
+}
+
+#sitename { 
+	font-size  : 32px;
+	margin-top : 20px;
+}
+
+#siteversion, #sitehelp { 
+	font-size  : 18px;
+	margin-top : 25px;
+	text-align : left;
+}
+
+#sitehelp {
+	text-align: right;
+}
+
+#menuname { 
+	font-size: 14px;
+}
+
+.data_set_menu_item, .cell_type_menu_item, .fit_type_menu_item {
+	cursor: pointer;
+}
+
+#staContainer {
+	position: relative;
+}
+
+.sta_img {
+	margin-top : 15px;
+	position   : absolute;
+	left       : 0;
+	top        : 0;
+}
+
+#pop-up {
+	margin-top : 15px;
+	color      : black;
+	text-align : left;
+	display    : on;
+}
+
+#pop-img {
+	font-size   : 12px;
+	font-weight : 600;
+}
+
+#pop-desc {
+	font-size   : 12px;
+	font-weight : 200;
+}
